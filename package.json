@@ -5,7 +5,7 @@
   "scripts": {
     "prebuild": "docker run -it --name dockerpkg-builder -v $(pwd):/app/ -v $(pwd)/.pkg-cache:/root/.pkg-cache --rm dockerpkg/builder:latest",
     "build": "docker build -t dockerpkg/dockerpkg-example:latest .",
-    "run": "docker run -it --name dockerpkg-example --rm dockerpkg/dockerpkg-example:latest",
+    "run": "docker run -p 3000:3000 -it --name dockerpkg-example --rm dockerpkg/dockerpkg-example:latest",
     "start": "micro"
   },
   "keywords": [],
